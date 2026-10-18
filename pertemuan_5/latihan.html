@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Latihan CSS - Tampilan Tengah Layar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center; /* Meratakan secara horizontal */
+            align-items: center;     /* Meratakan secara vertikal */
+            height: 100vh;           /* Mengisi 100% tinggi viewport */
+        }
+
+        .card-container {
+            background-color: #ffffff;
+            width: 380px;
+            padding: 30px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .card-container h2 {
+            color: #1a73e8;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .card-container p {
+            color: #555555;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .card-container .btn-latihan {
+            background-color: #1a73e8;
+            color: #ffffff;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .card-container .btn-latihan:hover {
+            background-color: #0b57d0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <h2>Praktikum CSS</h2>
+        <p>Halaman ini dibuat untuk latihan pemosisian elemen agar berada tepat di tengah-tengah layar secara horizontal maupun vertikal.</p>
+        <button class="btn-latihan">Selengkapnya</button>
+    </div>
+
+</body>
+</html>

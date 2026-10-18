@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html> <head>
+    <meta charset="UTF-8">
+    <title>Tugas 2 - Kalkulator Sederhana</title>
+</head> <body>
+    <h2>Kalkulator Sederhana</h2>
+    Angka 1: <input id="angka1" type="number"><br><br>
+    Angka 2: <input id="angka2" type="number"><br><br>
+    <input type="button" value="+" onClick="hitung('+')">
+    <input type="button" value="-" onClick="hitung('-')">
+    <input type="button" value="x" onClick="hitung('*')">
+    <input type="button" value="/" onClick="hitung('/')">
+    <p id="hasil"></p>
+
+    <script>
+        function hitung(operator) {
+            const a = document.getElementById("angka1").value;
+            const b = document.getElementById("angka2").value;
+            const hasil = document.getElementById("hasil");
+
+            if (a === "" || b === "") {
+                hasil.innerHTML = "Kedua angka harus diisi!";
+                return;}
+
+            const x = Number(a);
+            const y = Number(b);
+            let jawaban;
+
+            if (operator == "+") {jawaban = x + y;} 
+            else if (operator == "-") {jawaban = x - y;} 
+            else if (operator == "*") {jawaban = x * y;}
+            else {if (y == 0) {
+                    hasil.innerHTML = "Tidak bisa membagi dengan nol!";
+                    return;}
+                jawaban = x / y;}
+
+            hasil.innerHTML = "Hasil: " + x + " " + operator + " " + y + " = <b>" + jawaban + "</b>";
+        }
+    </script>
+</body></html>
